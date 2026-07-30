@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>公共关系及企业传播工作手册 · 康希诺生物</title>
+<meta name="description" content="面向全体员工的企业传播工作指南：什么事情可以找我们、我们能提供哪些支持、常见工作场景怎么做。">
+<style>
+:root{
+  --green:#00A15E; --green-deep:#00794A; --blue:#1F6FB5; --blue-deep:#15507F;
+  --ink:#152B3D; --mist:#5B7386; --line:#DFE9E4;
+  --tint-g:#EDF7F2; --tint-b:#EEF5FB; --paper:#FFFFFF; --wash:#F6FAF8;
+  --grad:linear-gradient(120deg,#00A15E 0%,#1F6FB5 100%);
+  --radius:14px;
+  --shadow:0 6px 24px rgba(21,43,61,.07);
+  --num-font:Georgia,"Times New Roman",serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC","Noto Sans CJK SC",sans-serif;
+  color:var(--ink);background:var(--paper);line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:rgba(0,161,94,.18)}
+
+/* ---------- top nav ---------- */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1100px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:18px;height:60px}
+.brand{font-weight:700;font-size:15px;white-space:nowrap;letter-spacing:.5px}
+.brand b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand small{color:var(--mist);font-weight:400;margin-left:8px;letter-spacing:1px}
+.nav-links{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{flex:none;font-size:13px;color:var(--mist);text-decoration:none;padding:6px 10px;border-radius:99px;transition:.2s}
+.nav-links a:hover{color:var(--green-deep);background:var(--tint-g)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(900px 420px at 85% -10%,rgba(31,111,181,.14),transparent 60%),
+  radial-gradient(800px 420px at 0% 110%,rgba(0,161,94,.14),transparent 60%),var(--paper)}
+.hero-in{max-width:1100px;margin:0 auto;padding:96px 20px 84px;text-align:center;position:relative}
+.hero .tag{display:inline-block;font-size:13px;letter-spacing:2px;color:var(--green-deep);background:var(--tint-g);border:1px solid rgba(0,161,94,.25);border-radius:99px;padding:5px 16px;margin-bottom:26px}
+.hero h1{font-size:clamp(30px,5.4vw,52px);font-weight:800;letter-spacing:2px;line-height:1.3}
+.hero h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .en{margin-top:14px;color:var(--mist);font-size:clamp(13px,1.8vw,16px);letter-spacing:1px}
+.hero .stock{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;font-size:13px;color:var(--mist)}
+.hero .stock span{border:1px solid var(--line);border-radius:8px;padding:4px 12px;background:#fff}
+.hero .motto{margin-top:34px;font-size:15px;color:var(--blue-deep);letter-spacing:6px;font-weight:600}
+.wave{display:block;width:100%;height:70px}
+
+/* ---------- table of contents ---------- */
+.toc{max-width:1100px;margin:-30px auto 0;padding:0 20px;position:relative;z-index:2}
+.toc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.toc a{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow);transition:.2s}
+.toc a:hover{transform:translateY(-3px);border-color:rgba(0,161,94,.45)}
+.toc .n{font-family:var(--num-font);font-size:24px;font-weight:700;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.toc .t{font-size:14px;font-weight:600}
+
+/* ---------- chapter divider ---------- */
+.chapter{position:relative;margin-top:88px;overflow:hidden;background:var(--grad);color:#fff}
+.chapter .big{position:absolute;right:-8px;top:50%;transform:translateY(-52%);font-family:var(--num-font);font-size:200px;font-weight:700;color:rgba(255,255,255,.13);line-height:1;pointer-events:none}
+.chapter-in{max-width:1100px;margin:0 auto;padding:56px 20px;position:relative}
+.chapter .kicker{font-size:13px;letter-spacing:4px;opacity:.85;margin-bottom:10px}
+.chapter h2{font-size:clamp(24px,3.6vw,36px);font-weight:800;letter-spacing:2px}
+.chapter p{margin-top:12px;max-width:640px;opacity:.92;font-size:15px}
+
+/* ---------- sections ---------- */
+.sec{max-width:1100px;margin:0 auto;padding:56px 20px 8px}
+.sec h3{font-size:clamp(20px,2.6vw,26px);font-weight:800;letter-spacing:1px;display:flex;align-items:center;gap:12px}
+.sec h3::before{content:"";width:6px;height:24px;border-radius:3px;background:var(--grad);flex:none}
+.sec .lede{color:var(--mist);margin-top:10px;max-width:760px}
+.grid{display:grid;gap:16px;margin-top:28px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.card.tint{background:var(--wash)}
+.card h4{font-size:16px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.card p{font-size:14px;color:var(--mist)}
+.dot{width:34px;height:34px;border-radius:10px;background:var(--tint-g);color:var(--green-deep);display:inline-flex;align-items:center;justify-content:center;flex:none;font-size:16px}
+.dot.b{background:var(--tint-b);color:var(--blue-deep)}
+ul.checks{list-style:none;margin-top:10px}
+ul.checks li{position:relative;padding-left:24px;font-size:14px;color:var(--ink);margin:7px 0}
+ul.checks li::before{content:"✓";position:absolute;left:0;top:0;color:var(--green);font-weight:700}
+.banner{margin-top:26px;background:var(--grad);color:#fff;border-radius:var(--radius);padding:18px 24px;font-weight:600;text-align:center;letter-spacing:1px;font-size:15px}
+.note{margin-top:22px;display:flex;gap:12px;align-items:flex-start;background:var(--tint-b);border:1px solid rgba(31,111,181,.2);border-radius:var(--radius);padding:16px 20px;font-size:14px;color:var(--blue-deep)}
+.note .i{flex:none;font-size:18px;line-height:1.4}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{font-size:13px;background:var(--tint-g);color:var(--green-deep);border-radius:99px;padding:4px 14px;border:1px solid rgba(0,161,94,.2)}
+.chip.b{background:var(--tint-b);color:var(--blue-deep);border-color:rgba(31,111,181,.2)}
+
+/* ---------- details (chapter 04 items) ---------- */
+details.topic{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);margin-top:14px;overflow:hidden}
+details.topic summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:18px 22px;font-weight:700;font-size:16px}
+details.topic summary::-webkit-details-marker{display:none}
+details.topic summary .idx{font-family:var(--num-font);font-size:14px;color:#fff;background:var(--grad);border-radius:8px;width:30px;height:30px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+details.topic summary .arrow{margin-left:auto;color:var(--mist);transition:.25s;font-size:13px}
+details.topic[open] summary .arrow{transform:rotate(180deg)}
+details.topic summary .hint{font-weight:400;font-size:13px;color:var(--mist);margin-left:2px}
+.topic-body{padding:0 22px 24px;border-top:1px dashed var(--line)}
+.topic-body h5{font-size:14px;font-weight:700;color:var(--green-deep);margin:20px 0 8px}
+.topic-body h5.b{color:var(--blue-deep)}
+.topic-body p{font-size:14px;color:var(--mist)}
+.mini{display:grid;gap:12px;margin-top:12px}
+.mini.m2{grid-template-columns:repeat(2,1fr)}
+.mini.m3{grid-template-columns:repeat(3,1fr)}
+.mini .cell{background:var(--wash);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.mini .cell b{display:block;font-size:14px;margin-bottom:4px}
+.mini .cell span{font-size:13px;color:var(--mist)}
+
+/* ---------- scenarios ---------- */
+.scene{background:#fff;border:1px solid var(--line);border-left:5px solid transparent;border-image:var(--grad) 1;border-radius:var(--radius);box-shadow:var(--shadow);padding:26px;margin-top:20px}
+.scene{border-left:5px solid var(--green)}
+.scene .sn{font-size:12px;letter-spacing:2px;color:var(--blue-deep);font-weight:700}
+.scene h4{font-size:18px;font-weight:800;margin:6px 0 4px}
+.scene .use{font-size:13px;color:var(--mist)}
+
+/* ---------- contacts ---------- */
+.person{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-align:center;box-shadow:var(--shadow)}
+.person .avatar{width:56px;height:56px;border-radius:50%;background:var(--grad);color:#fff;font-weight:700;font-size:20px;display:inline-flex;align-items:center;justify-content:center;margin-bottom:12px}
+.person h4{font-size:16px;font-weight:700}
+.person .role{font-size:13px;color:var(--mist);margin:4px 0 10px}
+.person a{font-size:13px;color:var(--blue);text-decoration:none;word-break:break-all}
+.person a:hover{text-decoration:underline}
+
+/* ---------- footer ---------- */
+.ending{margin-top:90px;background:var(--grad);color:#fff;text-align:center;padding:80px 20px;position:relative;overflow:hidden}
+.ending h2{font-size:clamp(28px,5vw,44px);letter-spacing:10px;font-weight:800}
+.ending p{margin-top:14px;opacity:.9;letter-spacing:2px}
+.footer{background:var(--blue-deep);color:rgba(255,255,255,.7);text-align:center;font-size:12px;padding:20px;letter-spacing:1px}
+
+/* ---------- reveal animation ---------- */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .toc-grid{grid-template-columns:repeat(2,1fr)}
+  .g3,.g4{grid-template-columns:repeat(2,1fr)}
+  .chapter .big{font-size:130px}
+}
+@media (max-width:600px){
+  .g2,.g3,.g4,.mini.m2,.mini.m3{grid-template-columns:1fr}
+  .brand small{display:none}
+  .hero-in{padding:64px 20px 60px}
+  .chapter .big{font-size:96px;opacity:.8}
+}
+@media print{.nav{position:static}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <div class="brand"><b>康希诺生物</b><small>CanSinoBIO</small></div>
+    <div class="nav-links">
+      <a href="#c1">01 为什么</a><a href="#c2">02 我们是谁</a><a href="#c3">03 提供支持</a><a href="#c4">04 找我们</a>
+      <a href="#c5">05 工作场景</a><a href="#c6">06 更有效</a><a href="#c7">07 小建议</a><a href="#c8">08 联系我们</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-in">
+    <span class="tag">面向全体员工的工作指南</span>
+    <h1>公共关系及<span>企业传播</span>工作手册</h1>
+    <p class="en">Corporate Communication and Public Relationship Handbook</p>
+    <div class="stock">
+      <span>香港联交所主板（H股）：6185.HK</span>
+      <span>上海证券交易所科创板（A股）：688185.SH</span>
+    </div>
+    <p class="motto">创新不止 · 世界无疫</p>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,40 C240,70 480,5 720,25 C960,45 1200,70 1440,30 L1440,70 L0,70 Z" fill="#F6FAF8"></path>
+    <path d="M0,50 C240,75 520,15 760,32 C1000,49 1220,68 1440,40" fill="none" stroke="#00A15E" stroke-opacity=".35" stroke-width="2"></path>
+    <path d="M0,58 C260,80 540,25 780,40 C1020,55 1240,72 1440,48" fill="none" stroke="#1F6FB5" stroke-opacity=".3" stroke-width="2"></path>
+  </svg>
+</header>
+
+<div class="toc rv">
+  <div class="toc-grid">
+    <a href="#c1"><span class="n">01</span><span class="t">为什么会有这本手册</span></a>
+    <a href="#c2"><span class="n">02</span><span class="t">我们是谁</span></a>
+    <a href="#c3"><span class="n">03</span><span class="t">我们提供哪些支持</span></a>
+    <a href="#c4"><span class="n">04</span><span class="t">哪些事情可以找我们</span></a>
+    <a href="#c5"><span class="n">05</span><span class="t">常见工作场景</span></a>
+    <a href="#c6"><span class="n">06</span><span class="t">怎么让传播更有效</span></a>
+    <a href="#c7"><span class="n">07</span><span class="t">传播小建议</span></a>
+    <a href="#c8"><span class="n">08</span><span class="t">一起做好传播</span></a>
+  </div>
+</div>
+
+<!-- ================= 01 ================= -->
+<section class="chapter" id="c1">
+  <span class="big">01</span>
+  <div class="chapter-in rv">
+    <p class="kicker">CHAPTER 01</p>
+    <h2>为什么会有这本手册</h2>
+    <p>这不是一份管理规定，而是一份面向全体员工的工作指南——在传播中更专业，在写作中更高效，在成长中更有价值。</p>
+  </div>
+</section>
+
+<section class="sec rv">
+  <h3>你可能会遇到这些问题</h3>
+  <div class="grid g3">
+    <div class="card tint"><h4><span class="dot">?</span>记者联系我了怎么办？</h4></div>
+    <div class="card tint"><h4><span class="dot b">?</span>我要参加论坛演讲，需要准备什么</h4></div>
+    <div class="card tint"><h4><span class="dot">?</span>合作伙伴想一起发布新闻</h4></div>
+    <div class="card tint"><h4><span class="dot b">?</span>我们团队有一个成果，希望更多人知道</h4></div>
+    <div class="card tint"><h4><span class="dot">?</span>我需要最新版企业介绍的资料</h4></div>
+    <div class="card tint"><h4><span class="dot b">?</span>公司活动需要摄影摄像</h4></div>
+    <div class="card tint"><h4><span class="dot">?</span>国外客户需要英文版企业介绍资料</h4></div>
+    <div class="card tint"><h4><span class="dot b">?</span>发现网上有公司不好的舆论</h4></div>
+    <div class="card tint"><h4><span class="dot">?</span>不知道这件事情值不值得宣传</h4></div>
+  </div>
+</section>
+
+<section class="sec rv">
+  <h3>这本手册能帮你什么</h3>
+  <p class="lede">每天，公司都会发生很多值得记录的事情。可能是一项科研突破、一场重要会议、一次国际合作；也可能是一位员工、一个团队、一份坚持。这本手册会告诉你：</p>
+  <div class="grid g4">
+    <div class="card"><h4><span class="dot">📣</span>什么事情需要联系我们</h4><p>识别值得记录与传播的关键时刻：重大科研进展和成果、重大会议与活动、对外合作和交流、员工故事与团队风采。</p></div>
+    <div class="card"><h4><span class="dot b">🧰</span>我们能够提供哪些支持</h4><p>官方资源与传播能力的全面帮助：内容策划与撰写、视觉设计与素材、媒体资源渠道、培训与经验分享。</p></div>
+    <div class="card"><h4><span class="dot">🧭</span>遇到不同场景应该怎么做</h4><p>标准化应对流程让沟通更顺畅、执行更高效：紧急事件处理、消息发布协作、活动宣传支持、跨部门协作机制。</p></div>
+    <div class="card"><h4><span class="dot b">🤝</span>如何一起把传播做得更有效</h4><p>协同共创、放大每一份有价值的声音：明确传播目标与受众、内容共创与审核、效果评估与优化、持续改进与创新。</p></div>
+  </div>
+</section>
+
+<!-- ================= 02 ================= -->
+<section class="chapter" id="c2">
+  <span class="big">02</span>
+  <div class="chapter-in rv">
+    <p class="kicker">CHAPTER 02</p>
+    <h2>我们是谁</h2>
+    <p>我们是连接公司与员工、媒体、合作伙伴、政府之间的一座桥梁——以专业的内容与传播能力，帮助组织更好地沟通内外，传递价值、建立信任、推动发展。</p>
+  </div>
+</section>
+
+<section class="sec rv">
+  <h3>不仅是发布消息</h3>
+  <div class="grid g3">
+    <div class="card">
+      <h4><span class="dot">✍️</span>帮助工作背后有值得分享的故事</h4>
+      <p>我们一起发现项目亮点，梳理传播重点，让专业内容更容易被理解、被记住、被传播。</p>
+      <ul class="checks">
+        <li>提炼有价值的内容，讲好真实的故事</li>
+        <li>梳理清晰的传播重点，避免信息杂乱</li>
+        <li>多渠道分发，提高内容的触达与影响力</li>
+        <li>数据复盘与优化，持续提升传播效果</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4><span class="dot b">🏛️</span>建立统一的企业形象</h4>
+      <p>通过品牌内容、企业文化、媒体沟通等方式，让更多人认知真实、专业、有温度的康希诺生物。</p>
+      <ul class="checks">
+        <li>品牌内容建设，传递核心价值观</li>
+        <li>企业文化传播，增强企业文化认同</li>
+        <li>媒体关系维护，扩大战略影响力</li>
+        <li>政府与行业沟通，树立专业形象</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4><span class="dot">🧑‍🤝‍🧑</span>陪伴每一次重要沟通</h4>
+      <p>从媒体采访、活动展示到合作交流、企业介绍，我们一起准备，让每一次对外沟通更加专业。</p>
+      <ul class="checks">
+        <li>媒体采访支持：提炼观点、准备问答</li>
+        <li>活动展示支持：策划亮点、现场执行</li>
+        <li>合作交流支持：资料准备、沟通陪同</li>
+        <li>企业介绍支持：内容打磨、形象呈现</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 03 ================= -->
+<section class="chapter" id="c3">
+  <span class="big">03</span>
+  <div class="chapter-in rv">
+    <p class="kicker">CHAPTER 03</p>
+    <h2>我们主要提供这些支持</h2>
+    <p>我们可以在这些方面为你提供帮助，让传播更顺畅，影响更广泛。</p>
+  </div>
+</section>
+
+<section class="sec rv">
+  <div class="grid g3">
+    <div class="card"><h4><span class="dot">📣</span>企业传播</h4><p>新闻稿、微信公众号、官网、海外传播、企业文化等内容策划与发布。</p></div>
+    <div class="card"><h4><span class="dot b">📷</span>活动支持</h4><p>摄影、活动报道、素材整理等全程支持。</p></div>
+    <div class="card"><h4><span class="dot">🗂️</span>品牌资料</h4><p>企业介绍、LOGO、宣传片、企业PPT、Factsheet 等资料支持。</p></div>
+    <div class="card"><h4><span class="dot b">🌍</span>国际传播</h4><p>英文资料、海外媒体、海外官网、国际会议等支持。</p></div>
+    <div class="card"><h4><span class="dot">🏆</span>成果传播</h4><p>科研成果、合作项目、企业文化等成果展示与传播。</p></div>
+    <div class="card"><h4><span class="dot b">💬</span>舆论支持</h4><p>媒体合作、舆情监测、网络声量洞察，助力风险预警与应对。</p></div>
+  </div>
+</section>
+
+<!-- ================= 04 ================= -->
+<section class="chapter" id="c4">
+  <span class="big">04</span>
+  <div class="chapter-in rv">
+    <p class="kicker">CHAPTER 04</p>
+    <h2>哪些事情可以找我们</h2>
+    <p>以下 13 类事项，都欢迎提前和我们沟通。点开每一项，查看适用场景与我们能提供的支持。</p>
+  </div>
+</section>
+
+<section class="sec rv">
+  <details class="topic" open>
+    <summary><span class="idx">1</span>媒体采访与记者沟通 <span class="hint">媒体来访 / 记者采访 / 线上连线 / 人物专访</span><span class="arrow">▼</span></summary>
+    <div class="topic-body">
+      <div class="note"><span class="i">💡</span><span>当你收到媒体采访邀请，或者需要参与采访时，请务必和我们沟通。不用当场接受采访，也不要拒绝采访，而是告诉媒体：<b>请和公司公共关系及企业传播部联系</b>。</span></div>
+      <h5>可以提供资料给我们，协助我们做好以下工作</h5>
+      <div class="mini m2">
+        <div class="cell"><b>梳理采访背景</b><span>了解采访主题、媒体定位与受众特征，帮助更好理解采访目的与关注点。</span></div>
+        <div class="cell"><b>准备相关材料</b><span>整理数据、案例与可视化素材，提供准确、权威的信息支持，增加说服力。</span></div>
+        <div class="cell"><b>明确沟通重点</b><span>确定核心信息与表达边界，聚焦关键信息，确保表述一致、清晰、有力。</span></div>
+        <div class="cell"><b>协调采访安排</b><span>确认时间、地点与技术对接，保障采访流程顺畅，提升沟通效率与体验。</span></div>
+      </div>
+    </div>
+  </details>
+
+  <details class="topic">
+    <summary><span class="idx">2</span>高管形象与公开活动支持 <span class="hint">拍摄 / 采访 / 演讲 / 公开亮相</span><span class="arrow">▼</span></summary>
+    <div class="topic-body">
+      <p style="margin-top:16px">涉及管理层照片拍摄、媒体采访、论坛演讲或重要公开活动时，可以提前和我们聊聊，一起把准备工作做得更充分，让每一次亮相都更从容、更专业。</p>
+      <h5>我们可以提供的支持</h5>
+      <div class="mini m2">
+        <div class="cell"><b>拍摄内容和呈现方式</b><span>规划拍摄主题、场景布置与视觉风格，确保呈现效果专业得体。</span></div>
+        <div class="cell"><b>相关背景资料</b><span>整理企业历程、业绩数据与行业洞察，让对外表达更有底气。</span></div>
+        <div class="cell"><b>演讲和活动所需内容</b><span>撰写演讲稿、制作演示材料与互动设计，让内容更有吸引力。</span></div>
+        <div class="cell"><b>协助现场安排</b><span>协调流程动线、时间把控与应急预案，保证活动顺利进行。</span></div>
+      </div>
+    </div>
+  </details>
+
+  <details class="topic">
+    <summary><span class="idx">3</span>官方平台内容发布 <span class="hint">官网 / 公众号 / 海外平台</span><span class="arrow">▼</span></summary>
+    <div class="topic-body">
+      <p style="margin-top:16px">如果你的团队有项目成果、合作动态、科研进展、重要活动等希望通过公司渠道展示，可以和我们一起评估内容方向。</p>
+      <div class="mini m3">
+        <div class="cell"><b>官网</b><span>展示公司介绍、产品与技术、新闻动态等，传递企业价值，塑造专业、可信赖的品牌形象。</span></div>
+        <div class="cell"><b>公众号</b><span>发布公司新闻、项目进展、活动信息等，增强互动与信任，扩大品牌影响力。</span></div>
+        <div class="cell"><b>海外平台</b><span>连接海外受众，展示企业国际形象，触达全球受众与合作伙伴，助力业务全球化发展。</span></div>
+      </div>
+      <h5 class="b">我们会一起做的事</h5>
+      <div class="mini m2">
+        <div class="cell"><b>梳理核心信息</b><span>把复杂信息整理成清晰、有价值的内容，突出重点与亮点。</span></div>
+        <div class="cell"><b>选择合适渠道</b><span>根据内容特点，匹配官网、公众号或海外平台，精准触达目标受众。</span></div>
+        <div class="cell"><b>准备内容素材</b><span>整理文字、图片、视频等素材，确保内容准确、合规、专业。</span></div>
+        <div class="cell"><b>规划发布时间</b><span>结合项目节点和传播节奏，制定发布计划，确保最佳呈现效果。</span></div>
+      </div>
+    </div>
+  </details>
+
+  <details class="topic">
+    <summary><span class="idx">4</span>舆情与媒体信息关注 <span class="hint">媒体报道 / 网络讨论 / 舆情关注</span><span class="arrow">▼</span></summary>
+    <div class="topic-body">
+      <p style="margin-top:16px">当你关注到与公司相关的媒体报道、网络信息或行业讨论，内容比较敏感、负面消极或不利于公司形象时，可以与我们沟通。</p>
+      <div class="mini m3">
+        <div class="cell"><b>① 发现</b><span>发现与公司相关的媒体报道、网络信息或行业讨论——多一分关注，帮助我们更早了解情况。</span></div>
+        <div class="cell"><b>② 评估</b><span>一起分析影响范围，判断是否需要进一步沟通或回应——理性判断，找到最合适的方式。</span></div>
+        <div class="cell"><b>③ 响应</b><span>制定合适的沟通策略，并持续关注后续发展，必要时及时调整——传递真实、专业的声音。</span></div>
+      </div>
+      <div class="note"><span class="i">🤝</span><span>有任何发现或疑问，欢迎随时联系我们。别让小问题变成大麻烦——你的一份关注，可以让我们的沟通更有效！</span></div>
+    </div>
+  </details>
+
+  <details class="topic">
+    <summary><span class="idx">5</span>重大项目与重要节点传播支持 <span class="hint">有重要成果，希望让更多人了解？</span><span class="arrow">▼</span></summary>
+    <div class="topic-body">
+      <h5>这些情况，可以和我们沟通</h5>
+      <div class="mini m2">
+        <div class="cell"><b>新产品、新项目进展</b><span>产品上市、临床进展、技术突破——一起梳理项目价值，选择合适传播的信息。</span></div>
+        <div class="cell"><b>重要合作与交流</b><span>海外合作、战略合作、重大签约——一起规划传播内容，展示合作价值。</span></div>
+        <div class="cell"><b>重要来访与企业活动</b><span>政府来访、客户交流、行业活动——提前准备相关资料，留下更好的记录。</span></div>
+        <div class="cell"><b>企业荣誉与重要成果</b><span>获奖认可、行业荣誉、重大突破——帮助整理亮点，让成果得到广泛关注。</span></div>
+      </div>
+      <h5 class="b">我们可以一起做什么</h5>
+      <div class="mini m2">
+        <div class="cell"><b>找到值得传播的内容</b><span>一起梳理项目价值、核心亮点、传播角度、员工故事，让重要信息更容易被理解。</span></div>
+        <div class="cell"><b>准备合适的传播材料</b><span>新闻稿、图片视频、企业介绍资料、公众号/官网内容等，让成果有更完整的呈现。</span></div>
+        <div class="cell"><b>选择合适的传播方式</b><span>根据项目特点共同判断：官网、公众号、媒体报道、海外平台、内部传播等。</span></div>
+        <div class="cell"><b>把握合适的传播节奏</b><span>提前规划：什么时间发布、哪些渠道发布、如何形成持续影响。</span></div>
+      </div>
+    </div>
+  </details>
+
+  <details class="topic">
+    <summary><span class="idx">6</span>联合宣传与合作物料 <span class="hint">涉及合作伙伴联合宣传时</span><span class="arrow">▼</span></summary>
+    <div class="topic-body">
+      <p style="margin-top:16px">无论是合作项目、活动宣传，还是联合制作宣传物料，都可以提前和我们沟通，一起确认内容和传播方式。越早沟通，合作越顺利。</p>
+      <h5>适用场景</h5>
+      <div class="chips"><span class="chip">合作视频：联合拍摄、项目合作</span><span class="chip">祝贺短片：合作伙伴祝贺、周年庆祝</span><span class="chip">联名海报：活动宣传、成果展示</span><span class="chip">联合宣传物料</span></div>
+      <h5 class="b">我们可以一起</h5>
+      <div class="mini m2">
+        <div class="cell"><b>明确传播重点</b><span>一起梳理想表达的内容。</span></div>
+        <div class="cell"><b>优化文字内容</b><span>让信息表达更清晰、更容易理解。</span></div>
+        <div class="cell"><b>统一品牌形象</b><span>确认 LOGO、企业名称及视觉规范。</span></div>
+        <div class="cell"><b>协调制作安排</b><span>一起推进素材准备、制作和发布的时间。</span></div>
+      </div>
+    </div>
+  </details>
+
+  <details class="topic">
+    <summary><span class="idx">7</span>外部直播与公开活动 <span class="hint">直播 / 媒体接待 / 科普活动</span><span class="arrow">▼</span></summary>
+    <div class="topic-body">
+      <h5>适用场景</h5>
+      <div class="chips"><span class="chip">外部直播：线上直播、发布会、主题分享</span><span class="chip">活动媒体接待：媒体采访、参会报道</span><span class="chip">科普活动：科普讲座、公众开放日</span></div>
+      <div class="mini m3">
+        <div class="cell"><b>提前告诉我们</b><span>提前规划活动时间、形式和主要内容，一起把细节考虑得更周全。越早沟通，准备越充分。</span></div>
+        <div class="cell"><b>一起对接资源</b><span>对接媒体需求，安排采访或报道资源，让更多人了解活动亮点。找对渠道，传播更有效。</span></div>
+        <div class="cell"><b>现场更顺畅</b><span>设计互动环节，安排现场传播和实时内容，让互动更有影响力。内容精彩，传播更出彩。</span></div>
+      </div>
+      <div class="banner">提前沟通，让活动准备更充分，传播更加出彩！</div>
+    </div>
+  </details>
+
+  <details class="topic">
+    <summary><span class="idx">8</span>企业文化与员工故事 <span class="hint">每个团队都有值得分享的故事</span><span class="arrow">▼</span></summary>
+    <div class="topic-body">
+      <h5>适用场景</h5>
+      <div class="chips"><span class="chip">司庆</span><span class="chip">团队活动</span><span class="chip">员工故事</span><span class="chip">合作成果</span></div>
+      <div class="mini m3">
+        <div class="cell"><b>特色活动</b><span>记录团队独特的文化活动与精彩时刻。</span></div>
+        <div class="cell"><b>优秀团队案例</b><span>展示团队协作的成功实践与经验。</span></div>
+        <div class="cell"><b>员工成长故事</b><span>讲述个人在康希诺生物的成长历程与蜕变。</span></div>
+      </div>
+      <div class="note"><span class="i">📖</span><span>通过《康家内刊》等平台，将团队故事转化为企业文化资产，传递正能量，凝聚归属感。欢迎与我们分享，一起记录康家人的精彩瞬间。</span></div>
+    </div>
+  </details>
+
+  <details class="topic">
+    <summary><span class="idx">9</span>展厅与来访接待支持 <span class="hint">客户来访 / 政府交流 / 展厅接待</span><span class="arrow">▼</span></summary>
+    <div class="topic-body">
+      <h5>我们可以提供</h5>
+      <div class="mini m3">
+        <div class="cell"><b>企业介绍资料</b><span>公司简介、核心产品等资料，适用于客户参观、商务洽谈。</span></div>
+        <div class="cell"><b>接待内容策划与设计</b><span>适用于政府参观、交流考察等场景。</span></div>
+        <div class="cell"><b>接待支持资料</b><span>接待流程、简介要点等，支持公司展厅参观接待。</span></div>
+      </div>
+      <p style="margin-top:14px">帮助访客全面了解康希诺生物，传递专业、可靠的企业形象。</p>
+    </div>
+  </details>
+
+  <details class="topic">
+    <summary><span class="idx">10</span>部门业务内容展示 <span class="hint">把专业内容变得更容易理解</span><span class="arrow">▼</span></summary>
+    <div class="topic-body">
+      <p style="margin-top:16px">如果你的专业内容需要转化为更容易理解的形式，我们可以一起看看怎么做更好。科普图文、短视频、海报设计等内容，都可以与我们交流。</p>
+      <div class="mini m2">
+        <div class="cell"><b>图文表达</b><span>将复杂信息转化为直观易懂的图文内容，把复杂信息讲清楚。</span></div>
+        <div class="cell"><b>视频内容</b><span>动态呈现，让内容更生动、更有吸引力，传播更高效。</span></div>
+        <div class="cell"><b>视觉设计</b><span>统一视觉风格，强化品牌认知，提升专业形象。</span></div>
+        <div class="cell"><b>沟通优化</b><span>一起调整表达方式，让受众更容易理解。</span></div>
+      </div>
+    </div>
+  </details>
+
+  <details class="topic">
+    <summary><span class="idx">11</span>内部传播培训 <span class="hint">让每位同事都更懂传播</span><span class="arrow">▼</span></summary>
+    <div class="topic-body">
+      <div class="mini m2" style="margin-top:16px">
+        <div class="cell"><b>媒体沟通技巧</b><span>掌握实用的媒体沟通方法：采访应对、官方信息发布、危机公关等。</span></div>
+        <div class="cell"><b>舆情风险意识</b><span>了解舆情监测与预测的方法：识别风险信号，及时应对，把风险控制在开始阶段。</span></div>
+        <div class="cell"><b>对外表达规范</b><span>了解对外沟通中的表达原则：准确传递信息，避免产生误会，传递统一、专业的公司形象。</span></div>
+        <div class="cell"><b>社交媒体传播</b><span>掌握社交媒体传播注意事项：内容发布规范、互动原则、舆情引导等，合规发声、有效互动。</span></div>
+        <div class="cell"><b>企业品牌形象</b><span>学习公司视觉形象规范、LOGO 使用规则，深入了解公司信息。</span></div>
+      </div>
+    </div>
+  </details>
+
+  <details class="topic">
+    <summary><span class="idx">12</span>品牌物料制作与更新 <span class="hint">流程规范 · 信息准确 · 视觉专业</span><span class="arrow">▼</span></summary>
+    <div class="topic-body">
+      <div class="mini m2" style="margin-top:16px">
+        <div class="cell"><b>品牌信息确认</b><span>核对品牌核心信息，确保所有物料表达准确、口径一致。</span></div>
+        <div class="cell"><b>内容梳理与优化</b><span>对企业介绍资料进行结构化整理，提升信息传达效率与专业度。</span></div>
+        <div class="cell"><b>视觉呈现建议</b><span>提供专业的视觉设计指导，增强品牌识别度与视觉冲击力。</span></div>
+        <div class="cell"><b>物料更新</b><span>持续跟进版本迭代，保持企业展示内容的时效性与统一性。</span></div>
+      </div>
+      <div class="banner">流程规范，信息准确，视觉专业，助力品牌每一次精彩呈现</div>
+    </div>
+  </details>
+
+  <details class="topic">
+    <summary><span class="idx">13</span>办公区域宣传展示 <span class="hint">活动海报 / 宣传栏 / 易拉宝 / 文化展示</span><span class="arrow">▼</span></summary>
+    <div class="topic-body">
+      <p style="margin-top:16px">当部门有线下宣传展示需求时，可以提前沟通，我们协助确认展示方式，让信息传递更高效、更有吸引力。</p>
+      <h5>适用场景</h5>
+      <div class="chips"><span class="chip">活动海报：新品上市、节日海报</span><span class="chip">宣传栏：企业新闻、通知公告</span><span class="chip">易拉宝：产品介绍、活动推广</span><span class="chip">文化展示：企业文化、价值观展示</span></div>
+      <h5 class="b">我们可以一起完善</h5>
+      <div class="mini m2">
+        <div class="cell"><b>展示内容规划</b><span>梳理展示内容，突出重点信息，提升传达效果。</span></div>
+        <div class="cell"><b>海报设计方向</b><span>提供专业设计建议，让视觉表达更吸睛。</span></div>
+        <div class="cell"><b>宣传形式选择</b><span>根据场景和目标，选择合适的宣传形式。</span></div>
+        <div class="cell"><b>展示位置沟通</b><span>确定最佳展示位置，提升曝光。</span></div>
+      </div>
+    </div>
+  </details>
+</section>
+
+<!-- ================= 05 ================= -->
+<section class="chapter" id="c5">
+  <span class="big">05</span>
+  <div class="chapter-in rv">
+    <p class="kicker">CHAPTER 05</p>
+    <h2>常见工作场景</h2>
+    <p>六个最常遇到的场景，遇到时对照着做，就不会慌。</p>
+  </div>
+</section>
+
+<section class="sec rv">
+  <div class="scene">
+    <p class="sn">场景一</p>
+    <h4>记者联系我了，应该怎么办？</h4>
+    <p class="use">适用：媒体采访、记者来访、行业专访</p>
+    <div class="note"><span class="i">☎️</span><span>收到媒体采访邀请后，请第一时间和我们沟通，一起做好采访准备。</span></div>
+    <div class="mini m3">
+      <div class="cell"><b>采访主题是什么？</b><span>了解采访目的和关注点，明确核心议题与沟通方向，有助于更好地准备和沟通。</span></div>
+      <div class="cell"><b>哪些内容适合重点介绍？</b><span>突出我们的优势、成果和价值，更有利于传递关键信息。</span></div>
+      <div class="cell"><b>是否需要准备背景资料？</b><span>备齐数据文档支撑论述，增强沟通的专业性和可信度。</span></div>
+    </div>
+  </div>
+
+  <div class="scene">
+    <p class="sn">场景二</p>
+    <h4>活动想留下照片和视频</h4>
+    <p class="use">适用：会议活动（研讨会、交流会、分享会）、论坛展会、年会司庆等各类线下活动现场</p>
+    <div class="mini m3">
+      <div class="cell"><b>哪些环节比较重要？</b><span>开场致辞、嘉宾分享、互动环节、颁奖时刻等。</span></div>
+      <div class="cell"><b>需要照片还是视频？</b><span>照片记录精彩瞬间；视频可制作活动回顾、宣传片等。</span></div>
+      <div class="cell"><b>后续是否计划用于宣传？</b><span>官网/公众号发布、宣传物料制作、对外传播等。</span></div>
+    </div>
+    <ul class="checks">
+      <li>记录精彩瞬间：留存活动亮点，珍藏美好回忆</li>
+      <li>增强传播效果：丰富内容形式，提升传播吸引力</li>
+      <li>提升品牌价值：展示专业形象，扩大品牌影响力</li>
+    </ul>
+    <div class="note"><span class="i">📷</span><span>提前沟通需求，拍摄更精准高效，让每一刻都更有价值。</span></div>
+  </div>
+
+  <div class="scene">
+    <p class="sn">场景三</p>
+    <h4>有内容想通过公司平台分享</h4>
+    <p class="use">适用：团队有项目成果、科研进展、合作动态、重要活动，值得让更多人了解</p>
+    <div class="mini m3">
+      <div class="cell"><b>这件事的亮点在哪里？</b><span>深度挖掘项目核心价值，提炼最具传播力的关键信息，让核心成果一眼可见。</span></div>
+      <div class="cell"><b>适合怎样更好地表达？</b><span>匹配专业受众与大众读者的阅读偏好，选择图文、视频、长文或短讯等最佳呈现形式。</span></div>
+      <div class="cell"><b>通过什么渠道展示？</b><span>精准对接官网、公众号、海外平台等多元渠道，让内容找到更合适的传播方式。</span></div>
+    </div>
+  </div>
+
+  <div class="scene">
+    <p class="sn">场景四</p>
+    <h4>有重要项目，希望扩大影响</h4>
+    <p class="use">适用：产品上市、临床进展、重大合作、政企交流</p>
+    <div class="mini m3">
+      <div class="cell"><b>如何提炼亮点</b><span>挖掘项目核心价值，打造传播记忆点。</span></div>
+      <div class="cell"><b>什么时候分享</b><span>把握最佳传播窗口，抢占舆论先机。</span></div>
+      <div class="cell"><b>用什么方式展示</b><span>选择最优呈现形式，放大传播效果。</span></div>
+    </div>
+    <div class="banner">专业策划 + 精准传播 + 多渠道联动，助力项目影响力最大化！</div>
+  </div>
+
+  <div class="scene">
+    <p class="sn">场景五</p>
+    <h4>需要公司的宣传资料</h4>
+    <p class="use">找不到合适的资料？找到我们，获得最新版</p>
+    <div class="mini m2">
+      <div class="cell"><b>企业宣传 PPT</b><span>专业品牌展示方案，助力企业形象传播（可下载使用）。</span></div>
+      <div class="cell"><b>宣传片</b><span>高质量视频内容，生动呈现企业价值（可在线播放）。</span></div>
+      <div class="cell"><b>LOGO</b><span>品牌视觉标识，统一企业对外形象（可下载使用）。</span></div>
+      <div class="cell"><b>企业图片素材</b><span>高清图库资源，满足各类宣传场景需求（可下载使用）。</span></div>
+    </div>
+    <div class="note"><span class="i">✉️</span><span>宣传物料更新、品牌素材使用、企业介绍需求等问题，欢迎随时联系「企业传播小助手」或公共邮箱 <b>communication@cansinotech.com</b>。</span></div>
+  </div>
+
+  <div class="scene">
+    <p class="sn">场景六</p>
+    <h4>每个团队都有值得分享的故事</h4>
+    <p class="use">无论是一次项目、一个温暖的互助时刻，还是共同成长的点滴经历，都是团队文化的真实写照</p>
+    <div class="mini m3">
+      <div class="cell"><b>工作成果</b><span>记录突破与成就，见证我们的专业与实力。</span></div>
+      <div class="cell"><b>团队活动</b><span>记录欢笑与感动，传递团队的温度与凝聚力。</span></div>
+      <div class="cell"><b>成长故事</b><span>记录蜕变与成长，激励每一个人不断前行。</span></div>
+    </div>
+    <ul class="checks">
+      <li>真实记录，团队点滴 · 传递正能量，凝聚归属感</li>
+      <li>展现企业文化，提升影响力 · 激励更多人，共同成长</li>
+    </ul>
+    <div class="note"><span class="i">📖</span><span>员工故事、部门成果均可投稿《康家内刊》——让每一个值得记录的瞬间，都成为我们共同的骄傲！</span></div>
+  </div>
+</section>
+
+<!-- ================= 06 ================= -->
+<section class="chapter" id="c6">
+  <span class="big">06</span>
+  <div class="chapter-in rv">
+    <p class="kicker">CHAPTER 06</p>
+    <h2>怎么让传播更有效</h2>
+    <p>五个观念上的转变，让你的工作被更多人看见。</p>
+  </div>
+</section>
+
+<section class="sec rv">
+  <h3>一个项目，不只有结果值得记录</h3>
+  <p class="lede">一个项目的价值，不只体现在最终成果，更体现在每一个关键阶段的成长与积累。</p>
+  <div class="grid g4">
+    <div class="card tint"><h4><span class="dot">1</span>技术突破</h4><p>研发推进中的关键创新时刻——价值体现：创新能力的提升。</p></div>
+    <div class="card tint"><h4><span class="dot b">2</span>团队协作</h4><p>成员之间配合的珍贵瞬间——价值体现：团队凝聚力与执行力。</p></div>
+    <div class="card tint"><h4><span class="dot">3</span>问题解决</h4><p>攻克难关的智慧与韧性——价值体现：解决问题能力的积累。</p></div>
+    <div class="card tint"><h4><span class="dot b">4</span>跨部门配合</h4><p>打破壁垒的协同合作——价值体现：高效协同的组织能力。</p></div>
+  </div>
+  <div class="chips"><span class="chip">过程记录：留存每一个关键时刻</span><span class="chip b">故事传播：让价值被更多人看见</span><span class="chip">经验沉淀：为未来提供参考</span><span class="chip b">价值放大：成就更大影响力</span></div>
+</section>
+
+<section class="sec rv">
+  <h3>同一个内容，可以有不同的表达方式</h3>
+  <p class="lede">一项成果、一场活动、一段故事，可以有多种表达形式：</p>
+  <div class="grid g4">
+    <div class="card"><h4><span class="dot">🌐</span>官网新闻</h4><p>企业官方渠道，权威发布。</p></div>
+    <div class="card"><h4><span class="dot b">📱</span>公众号内容</h4><p>社交媒体传播，触达用户。</p></div>
+    <div class="card"><h4><span class="dot">📖</span>《康家内刊》</h4><p>内部文化载体，凝聚员工。</p></div>
+    <div class="card"><h4><span class="dot b">🏢</span>企业介绍案例</h4><p>对外品牌展示，树立形象。</p></div>
+  </div>
+</section>
+
+<section class="sec rv">
+  <h3>小故事，也能成为大传播</h3>
+  <p class="lede">传播不一定只属于重大项目。一个团队的成长、一位员工的坚持、一次经验分享、一次公益活动，都可能成为展现康希诺文化和价值的窗口。</p>
+  <div class="grid g4">
+    <div class="card tint"><h4><span class="dot">🌱</span>团队成长</h4><p>记录团队从 0 到 1 的突破，见证每一次成长。</p></div>
+    <div class="card tint"><h4><span class="dot b">💪</span>员工坚持</h4><p>讲述每一个岗位的坚守，传递力量与温度。</p></div>
+    <div class="card tint"><h4><span class="dot">🔁</span>经验分享</h4><p>积累经验，让经验在分享中传递。</p></div>
+    <div class="card tint"><h4><span class="dot b">❤️</span>公益活动</h4><p>记录爱心与行动，展现企业的社会责任。</p></div>
+  </div>
+  <div class="banner">你的故事，值得被更多人看见！一起传递正能量，让小故事产生大影响</div>
+</section>
+
+<section class="sec rv">
+  <h3>提前留下素材，让精彩不被错过</h3>
+  <p class="lede">很多重要时刻只有一次。</p>
+  <div class="grid g3">
+    <div class="card"><h4><span class="dot">🖼️</span>视觉素材价值</h4><p>一张照片、一段视频，可能成为未来宣传、媒体报道或企业展示的重要素材。</p></div>
+    <div class="card"><h4><span class="dot b">📅</span>提前规划记录</h4><p>有计划的拍摄安排，确保关键时刻不被遗漏。</p></div>
+    <div class="card"><h4><span class="dot">🏦</span>积累内容资产</h4><p>帮助我们留下更多有价值的内容，构建长期品牌资产。</p></div>
+  </div>
+</section>
+
+<section class="sec rv">
+  <h3>每位同事，都是企业故事的分享者</h3>
+  <p class="lede">企业形象并不是为某一个部门单独塑造的。每一个项目、每一个团队、每一位员工的努力，都会成为外界认识康希诺生物的一部分。</p>
+  <div class="grid g3">
+    <div class="card tint"><p>每一次攻克难关的突破，都是企业进步的见证。</p></div>
+    <div class="card tint"><p>每一次默契协作的达成，都是企业力量的体现。</p></div>
+    <div class="card tint"><p>每一次认真负责的付出，都是企业形象的代言。</p></div>
+  </div>
+  <div class="note"><span class="i">💡</span><span>当你发现有值得分享的内容，欢迎与我们交流！分享故事、传递价值、展示风采、凝聚认同。</span></div>
+</section>
+
+<!-- ================= 07 ================= -->
+<section class="chapter" id="c7">
+  <span class="big">07</span>
+  <div class="chapter-in rv">
+    <p class="kicker">CHAPTER 07</p>
+    <h2>让传播有效的小建议</h2>
+    <p>四个日常习惯，让每一次投入发挥更大价值。</p>
+  </div>
+</section>
+
+<section class="sec rv">
+  <h3>重要活动，提前考虑拍摄需求</h3>
+  <p class="lede">很多精彩瞬间无法重新复制。活动中有重要嘉宾、关键环节时，可以提前沟通拍摄安排。</p>
+  <div class="grid g3">
+    <div class="card"><p>留下每一个嘉宾、每一个环节的精彩部分。</p></div>
+    <div class="card"><p>我们一起留下最有价值的画面。</p></div>
+    <div class="card"><p>让更多人看见我们的努力与成果。</p></div>
+  </div>
+</section>
+
+<section class="sec rv">
+  <h3>好内容，需要合适的时间呈现</h3>
+  <p class="lede">传播不仅关注"什么时候发布"，也关注内容质量本身。发布前先问自己三个问题：</p>
+  <div class="grid g3">
+    <div class="card">
+      <h4><span class="dot">📋</span>内容是否完整</h4>
+      <p>结构清晰，要素齐全。</p>
+      <ul class="checks"><li>核心信息是否覆盖全面？</li><li>逻辑结构是否清晰易懂？</li><li>能否满足受众的需求？</li></ul>
+      <p style="margin-top:10px">完整的内容是专业度的体现，也是建立信任的基础。</p>
+    </div>
+    <div class="card">
+      <h4><span class="dot b">🔍</span>信息是否准确</h4>
+      <p>数据真实，来源可靠。</p>
+      <ul class="checks"><li>数据是否真实可靠？</li><li>信息来源是否权威可靠？</li><li>专业术语是否准确规范？</li></ul>
+      <p style="margin-top:10px">准确的信息才能赢得信任，避免误导和风险。</p>
+    </div>
+    <div class="card">
+      <h4><span class="dot">💬</span>表达是否合适</h4>
+      <p>语境恰当，受众匹配。</p>
+      <ul class="checks"><li>表达方式是否通俗易懂？</li><li>传达重点是否突出明确？</li><li>是否考虑了不同平台的特点？</li></ul>
+      <p style="margin-top:10px">合适的表达让内容更有温度，更容易被接受和传播。</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec rv">
+  <h3>素材整理，让一次投入发挥更大价值</h3>
+  <p class="lede">一次活动产生的素材，未来可能用于……</p>
+  <div class="grid g4">
+    <div class="card"><h4><span class="dot">🌐</span>官网展示</h4><p>活动专题报道、公司实力与荣誉展示、合作案例展示——塑造专业形象，增强品牌信任。</p></div>
+    <div class="card"><h4><span class="dot b">📱</span>公众号发布</h4><p>活动报道与新闻稿件、新品发布、节日海报——触达目标用户，扩大影响力。</p></div>
+    <div class="card"><h4><span class="dot">📖</span>内刊内容</h4><p>员工风采与故事、企业文化与价值观——分享员工生活、传递价值理念。</p></div>
+    <div class="card"><h4><span class="dot b">🏢</span>企业介绍</h4><p>成果展示与案例分享、产品服务场景呈现——丰富介绍内容，助力业务拓展。</p></div>
+  </div>
+</section>
+
+<section class="sec rv">
+  <h3>使用统一品牌资料，保持企业形象一致</h3>
+  <p class="lede">优先使用最新版官方资料。统一视觉风格，提升品牌辨识度，增强信任感，让每一次展示都专业、规范、有价值。</p>
+  <div class="grid g4">
+    <div class="card tint"><h4><span class="dot">📊</span>企业介绍 PPT</h4><p>公司概况与发展历程、核心技术与产品优势、团队与战略布局、合作与社会责任。适用于公司介绍、项目汇报、商务演示。</p></div>
+    <div class="card tint"><h4><span class="dot b">🔷</span>LOGO</h4><p>官方 LOGO、多种格式、颜色与比例规范。企业视觉的核心元素，适用于各类官方平台及对外传播场景。</p></div>
+    <div class="card tint"><h4><span class="dot">🎬</span>宣传片</h4><p>企业宣传片、产品介绍视频、活动回顾视频、多版本时长选择。适用于展会、会议介绍等场景。</p></div>
+    <div class="card tint"><h4><span class="dot b">🗂️</span>品牌素材</h4><p>高清图片素材、PPT 模板与海报模板、品牌色与字体规范。统一的视觉素材库，满足各类传播需求。</p></div>
+  </div>
+</section>
+
+<!-- ================= 08 ================= -->
+<section class="chapter" id="c8">
+  <span class="big">08</span>
+  <div class="chapter-in rv">
+    <p class="kicker">CHAPTER 08</p>
+    <h2>找到我们，一起做好企业传播</h2>
+    <p>公共关系及企业传播部门成员，多种方式找到我们。</p>
+  </div>
+</section>
+
+<section class="sec rv">
+  <h3>部门成员</h3>
+  <div class="grid g4">
+    <div class="person">
+      <span class="avatar">柳</span>
+      <h4>柳青</h4>
+      <p class="role">公共关系及企业传播 · 总监</p>
+      <a href="mailto:qing4.liu@cansinotech.com">qing4.liu@cansinotech.com</a>
+    </div>
+    <div class="person">
+      <span class="avatar">吴</span>
+      <h4>吴梦云</h4>
+      <p class="role">公共关系及企业传播 · 资深专员</p>
+      <a href="mailto:mengyun.wu@cansinotech.com">mengyun.wu@cansinotech.com</a>
+    </div>
+    <div class="person">
+      <span class="avatar">任</span>
+      <h4>任晓然</h4>
+      <p class="role">公共关系及企业传播 · 资深专员</p>
+      <a href="mailto:maggie.ren@cansinotech.com">maggie.ren@cansinotech.com</a>
+    </div>
+    <div class="person">
+      <span class="avatar">李</span>
+      <h4>李亚轩</h4>
+      <p class="role">公共关系及企业传播 · 专员</p>
+      <a href="mailto:dolia.li@cansinotech.com">dolia.li@cansinotech.com</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec rv">
+  <h3>多种方式找到我们</h3>
+  <div class="grid g3">
+    <div class="card"><h4><span class="dot">🤖</span>企业传播小助手</h4><p>有问题？问小助手就对了！你的企业传播 AI 小助手。</p></div>
+    <div class="card"><h4><span class="dot b">✉️</span>飞书公共邮箱</h4><p>有问题？欢迎随时给我们发邮件！<br><a href="mailto:communication@cansinotech.com" style="color:var(--blue)">communication@cansinotech.com</a></p></div>
+    <div class="card"><h4><span class="dot">💬</span>飞书联系我们</h4><p>有问题？欢迎随时联系我们！随时沟通，高效响应。</p></div>
+  </div>
+</section>
+
+<div class="ending">
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.15" viewBox="0 0 1440 300" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,150 C240,220 480,60 720,120 C960,180 1200,240 1440,110" fill="none" stroke="#fff" stroke-width="2"></path>
+    <path d="M0,190 C260,260 540,100 780,150 C1020,200 1240,250 1440,150" fill="none" stroke="#fff" stroke-width="2"></path>
+  </svg>
+  <h2>创新不止 · 世界无疫</h2>
+  <p>我们想和你一起做好企业传播</p>
+</div>
+
+<footer class="footer">康希诺生物 CanSinoBIO · 公共关系及企业传播部 · 本手册面向全体员工</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('on');io.unobserve(en.target)}});
+  },{threshold:.08});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
